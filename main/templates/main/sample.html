@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    {{ value }}<br>
+    {{ value.2 }}
+    <p>
+        1. value가 딕셔너리라면 value['jeju']<br>
+    </p>
+    <p>
+        2. value가 함수거나 클래스라면 멤버나 method 를 찾는다. <br>
+    </p>
+    {{ value|add:'hi' }}<br>
+    {{ value|capfirst }}<br>
+    {{ value|lower }}<br>
+    {{ value|upper }}<br>
+    {{ dateT|date:'Y m d' }}<br>
+    <p>
+        템플릿변수 변수명|filesizeformat --이러면 파일 사이즈대로 나온다
+        {{ sampleText }}
+        {{ sampleText|linebreaks }}<br>
+        {{ sampleText|linenumbers }}<br>
+        {{ l|join:' !! ' }}<br>
+        {{ l|length }}<br>
+        {{ l|random }}<br>
+        {{ l|slice:'2'}}<br>
+        {{ sampleText|title }}
+    </p>
+</body>
+</html>

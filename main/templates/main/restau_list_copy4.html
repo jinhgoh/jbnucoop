@@ -1,0 +1,273 @@
+
+
+{% load staticfiles %}
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>우리코오</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="favicon.ico">
+
+        <!--Google Font link-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="{% static "assets/css/slick/slick.css" %}"> 
+        <link rel="stylesheet" href="{% static "assets/css/slick/slick-theme.css" %}">
+        <link rel="stylesheet" href="{% static "assets/css/animate.css" %}">
+        <link rel="stylesheet" href="{% static "assets/css/iconfont.css" %}">
+        <link rel="stylesheet" href="{% static "assets/css/font-awesome.min.css" %}">
+        <link rel="stylesheet" href="{% static "assets/css/bootstrap.css" %}">
+        <link rel="stylesheet" href="{% static "assets/css/magnific-popup.css" %}">
+        <link rel="stylesheet" href="{% static "assets/css/bootsnav.css" %}">
+
+        <!-- xsslider slider css -->
+
+
+        <!--<link rel="stylesheet" href="assets/css/xsslider.css">-->
+
+
+
+
+        <!--For Plugins external css-->
+        <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="{% static "assets/css/style.css" %}">
+        <!--<link rel="stylesheet" href="{% static "assets/css/colors/maron.css">-->
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="{% static "assets/css/responsive.css" %}" />
+
+        <script src="{% static "assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" %}"></script>
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar-collapse">
+
+
+        <!-- Preloader -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                </div>
+            </div>
+        </div><!--End off Preloader -->
+
+
+        <div class="culmn">
+            <!--Home page style-->
+
+
+            <nav class="navbar navbar-default bootsnav navbar-fixed">
+
+
+                <!-- Start Top Search -->
+                <div class="top-search">
+                    <div class="container">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Top Search -->
+
+
+                <div class="container">
+                    <div class="attr-nav">
+                        <ul>
+                            <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Start Header Navigation -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="Home.html">
+                            <img src="{% static "assets/images/logo.png" %}" class="logo" alt="">
+                            <!--<img src="{% static "assets/images/footer-logo.png" %}" class="logo logo-scrolled" alt="">-->
+                        </a>
+
+                    </div>
+                    <!-- End Header Navigation -->
+                    <!-- navbar menu -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="Home.html">Home</a></li>
+                            <li><a href="맛집리스트 실제 최종.html">맛집리스트</a></li>
+                            <li><a href="이벤트.html">이벤트</a></li>
+                            <li><a href="후기(3).html">후기</a></li>
+
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+
+            </nav>
+
+
+            <body>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 100%;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+<div id="map" style="width:100%;height:800px;"></div>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=40124b835a096dbece7e6048d3858777"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(35.8441755, 127.1262112), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+{% for i in data %}
+// 마커가 표시될 위치입니다 
+var markerPosition  = new kakao.maps.LatLng({{i.3}}, {{i.4}}); 
+
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition
+});
+
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);
+ 
+var iwContent = '<div style="padding:5px;">{{i.1}} </div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+    iwPosition = new kakao.maps.LatLng({{i.3}}, {{i.4}}); //인포윈도우 표시 위치입니다
+
+// 인포윈도우를 생성합니다
+var infowindow = new kakao.maps.InfoWindow({
+    position : iwPosition, 
+    content : iwContent
+});
+  
+// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+infowindow.open(map, marker); 
+{% endfor %}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeIPW6frN8tpXRM3Te8qlWglDLH_R38CM&callback=initMap">
+    </script>
+  </body>
+    </script>
+
+
+{% for i in data %}
+<p>
+    {{i.1}}<br>
+    {{i.3}}
+    {{i.4}}
+</p>
+{% endfor %}
+                </div>
+                <footer id="contact" class="footer action-lage bg-black p-top-40">
+                    <!--<div class="action-lage"></div>-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="widget_area">
+
+
+                                <div class="col-md-6 ">
+                                    <div class="widget_item widget_about mx-30">
+                                        <h5 class="text-white">About Us</h5>
+                                        <p class="m-top-20">
+                                            전북대학교 고진형,김태명,박나영,신채린
+                                        </p>
+                                        <div class="widget_ab_item m-top-30">
+                                            <div class="item_icon"><i class="fa fa-location-arrow"></i></div>
+                                            <div class="widget_ab_item_text">
+                                                <h6 class="text-white">Location</h6>
+                                                <p>
+                                                    전북대학교 학습도서관 3층 창업지원단 사무실-기업보육실-A방
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="widget_ab_item m-top-30">
+                                            <div class="item_icon"><i class="fa fa-envelope-o"></i></div>
+                                            <div class="widget_ab_item_text">
+                                                <h6 class="text-white">Email Address </h6>
+                                                <p>ktm504@naver.com</p>
+                                            </div>
+                                        </div>
+                                    </div><!-- End off widget item -->
+                                </div><!-- End off col-md-3 -->
+
+
+                                <div class="col-md-6">
+                                    <div class="widget_item widget_service sm-m-top-50 m-bottom-30">
+                                        <h5 class="text-white">네비게이션</h5>
+                                        <ul class="m-top-20">
+                                            <li class="m-top-20"><a href="Home.html"><i class="fa fa-angle-right"></i> Home</a></li>
+                                            <li class="m-top-20"><a href="맛집리스트 실제 최종.html"><i class="fa fa-angle-right"></i> 맛집리스트</a></li>
+                                            <li class="m-top-20"><a href="이벤트.html"><i class="fa fa-angle-right"></i> 이벤트</a></li>
+                                            <li class="m-top-20"><a href="후기(3).html"><i class="fa fa-angle-right"></i> 후기</a></li>
+
+                                        </ul>
+                                    </div><!-- End off widget item -->
+                                </div><!-- End off col-md-3 -->
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </footer>
+
+
+
+
+        </div>
+
+        <!-- JS includes -->
+
+        <script src="{% static "assets/js/vendor/jquery-1.11.2.min.js" %}"></script>
+        <script src="{% static "assets/js/vendor/bootstrap.min.js" %}"></script>
+
+        <script src="{% static "assets/js/owl.carousel.min.js" %}"></script>
+        <script src="{% static "assets/js/jquery.magnific-popup.js" %}"></script>
+        <script src="{% static "assets/js/jquery.easing.1.3.js" %}"></script>
+        <script src="{% static "assets/css/slick/slick.js" %}"></script>
+        <script src="{% static "assets/css/slick/slick.min.js" %}"></script>
+        <script src="{% static "assets/js/jquery.collapse.js" %}"></script>
+        <script src="{% static "assets/js/bootsnav.js" %}"></script>
+
+
+
+        <script src="{% static "assets/js/plugins.js" %}"></script>
+        <script src="{% static "assets/js/main.js" %}"></script>
+
+    </body>
+</html>

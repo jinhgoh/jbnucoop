@@ -1,0 +1,277 @@
+hello world 
+{% load staticfiles %}
+
+﻿<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>우리코오</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <!--Google Font link-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{% static "assets/css/slick/slick.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/slick/slick-theme.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/animate.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/iconfont.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/bootstrap.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/magnific-popup.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/bootsnav.css" %}">
+
+    <!-- xsslider slider css -->
+    <!--<link rel="stylesheet" href="assets/css/xsslider.css">-->
+    <!--For Plugins external css-->
+    <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="{% static "assets/css/style.css" %}">
+    <!--<link rel="stylesheet" href="assets/css/colors/maron.css">-->
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="{% static "assets/css/responsive.css" %}" />
+
+    <script src="{% static "assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" %}"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar-collapse">
+
+
+    <!-- Preloader -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="object_one"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_three"></div>
+                <div class="object" id="object_four"></div>
+            </div>
+        </div>
+    </div><!--End off Preloader -->
+
+
+    <div class="culmn ">
+        <!--Home page style-->
+
+
+        <nav class="navbar navbar-default bootsnav navbar-fixed ">
+
+
+            <!-- Start Top Search -->
+            <div class="top-search">
+                <div class="container">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                    </div>
+                </div>
+            </div>
+            <!-- End Top Search -->
+
+
+            <div class="container">
+                <div class="attr-nav  ">
+                    <ul>
+                        <li class="search"><a href="Home.html"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Start Header Navigation -->
+
+                <div class="navbar-header ">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand  " href="Home.html">
+                        <img src="{% static "assets/images/logo.png" %}" class="logo  " alt="">
+                        <!--<img src="{% static "assets/images/footer-logo.png" %}" class="logo logo-scrolled" alt="">-->
+                    </a>
+                </div>
+
+                <!-- End Header Navigation -->
+                <!-- navbar menu -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="restau_list/">맛집리스트</a></li>
+                        <li><a href="event/">이벤트</a></li>
+                        <li><a href="review.html">후기</a></li>
+
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+
+        </nav>
+
+        <!--Home Sections-->
+
+        <div class="container m-top-80 p-top-80 bg-white">
+
+            <div class="row sm-mx-auto d-blcok">
+                <div class="col-sm-6">
+
+                    <img src="{% static "assets/images/4.png" %}" class="4 display-block image-responsive image-fluid  " alt="">
+                </div>
+
+
+
+
+                <div class="col-sm-6  sm-p-top-70  ">
+                    <img src="{% static "assets/images/3.png" %}" class="3  display-block image-responsive image-fluid  " style="width:100%;" alt="">
+
+                </div>
+            </div>
+        </div>
+        <section id="features" class="features">
+            <div class="container">
+                <div class="row">
+                    <div class="main_features fix roomy-70">
+                        <div class="col-md-4">
+                            <div class="features_item sm-m-top-30">
+                                <a href="https://jejucodinglecture-kyoxr.run.goorm.io/restau_list/">
+                                    <div class="f_item_icon ">
+                                        <i class="fa fa-thumbs-o-up  "></i>
+                                </a>
+                            </div>
+                                <div class="f_item_text">
+                                    <h3>다양한 제휴 정보!</h3>
+                                    <p>
+                                        '우리코오'는 정부 Open AIP를 이용하여 제휴서비스를 맺은 외식업체 및 학교 주변 외식업체에 대한 정보를 제공합니다
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="features_item sm-m-top-30">
+                                <a href="https://jejucodinglecture-kyoxr.run.goorm.io/restau_list/">
+                                    <div class="f_item_icon ">
+                                        <i class="fa fa-tablet "></i>
+                                </a>
+                            </div>
+                                    <div class="f_item_text">
+                                        <h3>시각화된 정보!</h3>
+                                        <p>
+                                            '우리코오'는 제휴 음식점과 학교주변 음식점에 대한 정보를 리스트 및 맵 그래픽으로 시각화하여 제공합니다
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="features_item sm-m-top-30">
+                                <a href="후기(3).html">
+                                    <div class="f_item_icon ">
+                                        <i class="fa fa-sliders "></i>
+                                </a>
+                            </div>
+                                <div class="f_item_text">
+                                    <h3>신뢰도 있는 리뷰!</h3>
+                                    <p>
+                                        '우리코오'는 지속적으로 제휴서비스 정보제공을 갱신하고, 신뢰도 있는 사용자들의 리뷰를 관리합니다
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End off row -->
+            </div><!-- End off container -->
+        </section><!-- End off Featured Section-->
+        <!--End off row-->
+
+
+
+
+
+        <footer id="contact" class="footer action-lage bg-black p-top-40">
+            <!--<div class="action-lage"></div>-->
+            <div class="container">
+                <div class="row">
+                    <div class="widget_area">
+
+
+                        <div class="col-md-6 ">
+                            <div class="widget_item widget_about mx-30">
+                                <h5 class="text-white">About Us</h5>
+                                <p class="m-top-20">
+                                    전북대학교 고진형,김태명,박나영,신채린
+                                </p>
+                                <div class="widget_ab_item m-top-30">
+                                    <div class="item_icon"><i class="fa fa-location-arrow"></i></div>
+                                    <div class="widget_ab_item_text">
+                                        <h6 class="text-white">Location</h6>
+                                        <p>
+                                            전북대학교 학습도서관 3층 창업지원단 사무실-기업보육실-A방
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="widget_ab_item m-top-30">
+                                    <div class="item_icon"><i class="fa fa-envelope-o"></i></div>
+                                    <div class="widget_ab_item_text">
+                                        <h6 class="text-white">Email Address </h6>
+                                        <p>ktm504@naver.com</p>
+                                    </div>
+                                </div>
+                            </div><!-- End off widget item -->
+                        </div><!-- End off col-md-3 -->
+
+
+                        <div class="col-md-6">
+                            <div class="widget_item widget_service sm-m-top-50 m-bottom-30">
+                                <h5 class="text-white">네비게이션</h5>
+                                <ul class="m-top-20">
+                                    <li class="m-top-20"><a href="Home.html"><i class="fa fa-angle-right"></i> Home</a></li>
+                                    <li class="m-top-20"><a href="https://jejucodinglecture-kyoxr.run.goorm.io/restau_list/"><i class="fa fa-angle-right"></i> 맛집리스트</a></li>
+                                    <li class="m-top-20"><a href="event.html"><i class="fa fa-angle-right"></i> 이벤트</a></li>
+                                    <li class="m-top-20"><a href="review.html"><i class="fa fa-angle-right"></i> 후기</a></li>
+
+                                </ul>
+                            </div><!-- End off widget item -->
+                        </div><!-- End off col-md-3 -->
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+
+
+
+    </div>
+
+    <!-- JS includes -->
+
+    <script src="{% static "assets/js/vendor/jquery-1.11.2.min.js" %}"></script>
+    <script src="{% static "assets/js/vendor/bootstrap.min.js" %}"></script>
+
+    <script src="{% static "assets/js/owl.carousel.min.js" %}"></script>
+    <script src="{% static "assets/js/jquery.magnific-popup.js" %}"></script>
+    <script src="{% static "assets/js/jquery.easing.1.3.js" %}"></script>
+    <script src="{% static "assets/css/slick/slick.js" %}"></script>
+    <script src="{% static "assets/css/slick/slick.min.js" %}"></script>
+    <script src="{% static "assets/js/jquery.collapse.js" %}"></script>
+    <script src="{% static "assets/js/bootsnav.js" %}"></script>
+
+
+
+    <script src="{% static "assets/js/plugins.js" %}"></script>
+    <script src="{% static "assets/js/main.js" %}"></script>
+
+</body>
+</html>

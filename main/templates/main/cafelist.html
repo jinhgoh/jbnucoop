@@ -1,0 +1,25 @@
+hello cafelist hh
+{% for i in cafelistobj %}    
+    <h1>{{ i.name }}</h1>
+    <p>{{ i.content }}</p>
+    <p>{{ forloop.revcounter0 }}</p>
+
+    {% if forloop.counter == 1 %}
+   <p> if문 입니다. </p>
+    {% elif forloop.counter == 2  %}
+   <p> elif문 입니다. </p>
+    {% else %}
+   <p> else문 입니다. </p>
+    {% endif %}
+{% endfor %}
+{% with value='hello world' %}
+<h1>
+    {{value}}
+</h1>
+{% endwith %}
+{# hello world #}
+{% comment 'hojun' %}
+<h1>
+    이 소스코드를 보류합니다. 
+</h1>
+{% endcomment %}
