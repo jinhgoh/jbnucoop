@@ -24,7 +24,7 @@ data = l[1:44]
 api_key = '40124b835a096dbece7e6048d3858777'
 def restau_list(request):
     return render(request, 'main/restau_list.html', {'data':data, 'api_key':api_key})
-#    return render(request, 'main/restau_list.html', {'data':data})
+#    return render(request, 'main/restau_list.html', {'data':data})g
 
 def event(request):
     return render(request, 'main/event.html')
