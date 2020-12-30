@@ -18,7 +18,7 @@ for line in lines:
     l.append(line.split(','))
 f.close()
 
-data = l[1:25]
+data = l[1:44]
 
 
 def restau_list(request):
