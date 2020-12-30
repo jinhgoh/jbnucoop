@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'taggit',
-    'chatbot',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +126,5 @@ STATICFILES_DIRS = (
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+KAKAO_API_KEY = os.environ.get('KAKAO_API_KEY')
