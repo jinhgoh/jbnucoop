@@ -12,18 +12,22 @@ def cafelist(request):
     cafelistobj = Cafe.objects.all()
     return render(request, 'main/cafelist.html', {'cafelistobj':cafelistobj})
 
-f = open("/workspace/mmri/mysite/mysite/static/food.csv", 'r')
+f = open("static/food.csv", 'r')
 l = []
 lines = f.readlines()
 for line in lines:
     l.append(line.split(','))
 f.close()
 
-data = l[1:44]
+data1 = l[1:44]
 
 api_key = '40124b835a096dbece7e6048d3858777'
 def restau_list(request):
-    return render(request, 'main/restau_list.html', {'data':data, 'api_key':api_key})
+    return render(request, 'main/restau_list.html', {'data1':data1, 'api_key':api_key})
+#    return render(request, 'main/restau_list.html', {'data':data})g
+
+def restau_list2(request):
+    return render(request, 'main/restau_list2.html', {'data1':data1, 'api_key':api_key})
 #    return render(request, 'main/restau_list.html', {'data':data})g
 
 def event(request):

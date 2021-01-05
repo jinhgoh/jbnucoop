@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main.views import index, cafelist, restau_list, event, review, cafedetails, sample
+from main.views import index, cafelist, restau_list, restau_list2, event, review, cafedetails, sample
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -24,6 +24,7 @@ urlpatterns = [
     path('', index),
     path('cafelist/', cafelist),
     path('restau_list/', restau_list),
+    path('restau_list2/', restau_list2),
     path('review/', review),
     path('event/', event),
     path('cafelist/<int:pk>', cafedetails),

@@ -128,7 +128,7 @@
                     };
 
                 var map = new kakao.maps.Map(mapContainer, mapOption);
-                {% for i in data1 %}
+                {% for i in data %}
                 // 마커가 표시될 위치입니다 
                 var markerPosition  = new kakao.maps.LatLng({{i.3}}, {{i.4}}); 
 
@@ -176,7 +176,7 @@
                 }
                 setCenter()
                 </script>
-                {% for i in data1 %}
+                {% for i in data %}
                 <p>
                     {{i.1}}<br>
                     {{i.3}}

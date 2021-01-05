@@ -1,0 +1,32 @@
+body {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.marker {
+    border: 1px solid black;
+    background: green;
+    opacity:0.8;
+    width: 24px;
+    height: 24px;
+    border-radius:50%
+}
+
+.infowindow_wrap {
+    background: white;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#current {
+    position: absolute;
+    top: 180px;
+    z-index: 10000;
+    background: white;
+    left: 20px;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: border;
+}

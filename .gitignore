@@ -3,4 +3,3 @@
 myvenv/
 venv/
 .env
-main/views.py
