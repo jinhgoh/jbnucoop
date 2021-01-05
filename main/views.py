@@ -12,7 +12,7 @@ def cafelist(request):
     cafelistobj = Cafe.objects.all()
     return render(request, 'main/cafelist.html', {'cafelistobj':cafelistobj})
 
-f = open("static/food.csv", 'r')
+f = open("static/food.csv", 'r', encoding='UTF8')
 l = []
 lines = f.readlines()
 for line in lines:
