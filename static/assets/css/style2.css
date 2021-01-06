@@ -21,7 +21,7 @@ body1 {
 #current {
     position: absolute;
     top: 180px;
-    z-index: 10000;
+    z-index: 1;
     background: white;
     left: 20px;
     padding: 10px;
@@ -34,7 +34,7 @@ body1 {
 #jeonjucam {
     position: absolute;
     top: 80px;
-    z-index: 10001;
+    z-index: 1;
     background: white;
     left: 20px;
     padding: 10px;
@@ -47,7 +47,7 @@ body1 {
 #specialcam {
     position: absolute;
     top: 130px;
-    z-index: 10001;
+    z-index: 1;
     background: white;
     left: 20px;
     padding: 10px;
