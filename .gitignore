@@ -3,3 +3,5 @@
 myvenv/
 venv/
 .env
+django.log
+uwsgi.ini
