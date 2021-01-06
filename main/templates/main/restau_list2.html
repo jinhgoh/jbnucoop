@@ -18,8 +18,10 @@
 </head>
 <body>
     <div id="current">현재위치</div>
+    <div id="jeonjucam">전캠</div>
+    <div id="specialcam">특캠</div>
         
-    </div>
+    
     <div id="map" style="width:100%;height:80vh;"></div>
     <script type="text/javascript" src="{% static "assets/data.js" %}"></script>
     <script>
@@ -27,12 +29,7 @@
             center: new naver.maps.LatLng(35.84317580042795, 127.13167342246314),
             zoom: 17
         };
-        document.write('1')
-        console.log(data) 
-        for (var i in data) {
-            var target = data[i];
-            document.write(target.lat, target.lng);
-        }
+
 
         var map = new naver.maps.Map('map', mapOptions);
 
@@ -101,6 +98,10 @@
                     marker = new naver.maps.Marker({
                         map: map,
                         position: latlng,
+                        icon: {
+                            content: '<img class="pulse" draggable="false" unselectable="on" src="{% static "assets/images/geo_circle.png" %}" >',
+                            anchor: new naver.maps.Point(11, 11)
+                        }
                     });
                     map.setZoom(14, false);
                     map.panTo(latlng);
@@ -109,6 +110,26 @@
                 alert("위치정보 사용 불가능");
             }
         });
+        
+        $("#jeonjucam").click(() => {
+            function aa() {
+                const latlng = new naver.maps.LatLng(35.84317580042795, 127.13167342246314);
+                map.setZoom(15, false);
+                map.panTo(latlng);
+            }
+            aa();
+        });
+        
+                $("#specialcam").click(() => {
+            function aa() {
+                const latlng = new naver.maps.LatLng(35.94205581773736, 126.9604682512279);
+                map.setZoom(17, false);
+                map.panTo(latlng);
+            }
+            aa();
+        });
+        
+        
     </script>
 </body>
 </html>
