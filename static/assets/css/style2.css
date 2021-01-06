@@ -1,6 +1,6 @@
-body {
-    padding: 0px !important;
-    margin: 0px !important;
+body1 {
+    padding: ;
+    margin:  ;
 }
 
 .marker {
@@ -24,7 +24,7 @@ body {
     z-index: 10000;
     background: white;
     left: 20px;
-    padding: 15px;
+    padding: 10px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     cursor: pointer;
@@ -33,11 +33,11 @@ body {
 
 #jeonjucam {
     position: absolute;
-    top: 20px;
+    top: 80px;
     z-index: 10001;
     background: white;
     left: 20px;
-    padding: 15px;
+    padding: 10px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     cursor: pointer;
@@ -46,11 +46,11 @@ body {
 
 #specialcam {
     position: absolute;
-    top: 80px;
+    top: 130px;
     z-index: 10001;
     background: white;
     left: 20px;
-    padding: 15px;
+    padding: 10px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     cursor: pointer;
