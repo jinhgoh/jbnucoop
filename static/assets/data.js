@@ -19,13 +19,13 @@ var data = [
       img: '<img src="{% static "assets/images/restaurant/restaurant3.png" %}" >'
     },{
       title: '동창야채닭갈비',
-      partnership: '2인 주문시 음료수 한 병 & 3인이상 주문시 라면 & 우동 & 하얀떡사리선택',
+      partnership: '2인 주문시 음료수 한 병 </br>3인이상 주문시 라면, 우동, 하얀떡사리선택',
       lat: '35.84124915991833',
       lng: '127.13103351513166',
       img: '<img src="{% static "assets/images/restaurant/restaurant4.png" %}" >'
     },{
-      title: 'bhc',
-      partnership: '홀 & 방문 포장 2만원 이상 치즈볼 2알 & 치킨 두 마리이상 결제 시 치즈볼 3알 서비스',
+      title: 'BHC',
+      partnership: '홀 & 방문 포장 2만원 이상 치즈볼 2알</br>치킨 두 마리이상 결제 시 치즈볼 3알 서비스',
       lat: '35.84434214023862',
       lng: '127.12627573536507',
       img: '<img src="{% static "assets/images/restaurant/restaurant5.png" %}" >'
@@ -85,7 +85,7 @@ var data = [
       img: '<img src="{% static "assets/images/restaurant/restaurant1.png" %}" >'
     },{
       title: '팬텀팬피그',
-      partnership: '개인:점심 한정 기존가격 10% 할인 & 단체:special upgrade & 단체 예약시 주류 2500',
+      partnership: '개인:점심 한정 기존가격 10% 할인</br>단체:special upgrade & 단체 예약시 주류 2500',
       lat: '35',
       lng: '127',
       img: '<img src="{% static "assets/images/restaurant/restaurant1.png" %}" >'
@@ -121,7 +121,7 @@ var data = [
       img: '<img src="{% static "assets/images/restaurant/restaurant1.png" %}" >'
     },{
       title: '마이마이 치킨',
-      partnership: '홀 기본 떡사리 추가 & 현금결제시 마리당 2000원 할인 or 주류 한병당 1000원 할인 & 동전관 1 & 2 학생회관에서 배달시 떡사리 추가 & 두마리 이상 주문시 음료 대',
+      partnership: '홀 기본 떡사리 추가</br> 현금결제시 마리당 2000원 할인 or 주류 한병당 1000원 할인<br>동전관 1, 2 학생회관에서 배달시 떡사리 추가 </br> 두마리 이상 주문시 음료 대',
       lat: '35.8443508371491',
       lng: '127.12615503596456',
       img: '<img src="{% static "assets/images/restaurant/restaurant1.png" %}" >'
@@ -157,7 +157,7 @@ var data = [
       img: '<img src="{% static "assets/images/restaurant/restaurant1.png" %}" >'
     },{
       title: '건남',
-      partnership: '현금 결제 시 5% 할인 & 30000원 이상 주문시 금액 10%상당 안주 서비스',
+      partnership: '현금 결제 시 5% 할인</br>30000원 이상 주문시 금액 10%상당 안주 서비스',
       lat: '35.84247435136745',
       lng: '127.1273668818227',
       img: '<img src="{% static "assets/images/restaurant/restaurant1.png" %}" >'
@@ -193,7 +193,7 @@ var data = [
       img: '<img src="{% static "assets/images/restaurant/restaurant1.png" %}" >'
     },{
       title: '스카이 이즈 블루',
-      partnership: '8시 이전 입장 시 감자 고로케 서비스 & 현금 결제 시 생맥 제외한 주류 병당 천원씩 할인',
+      partnership: '8시 이전 입장 시 감자 고로케 서비스</br>현금 결제 시 생맥 제외한 주류 병당 천원씩 할인',
       lat: '35.842605911229306',
       lng: '127.1274936933587',
       img: '<img src="{% static "assets/images/restaurant/restaurant1.png" %}" >'
