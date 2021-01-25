@@ -16,8 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from main.views import index, cafelist, restau_list, restau_list2, event, review, cafedetails, sample
+#main 폴더의 views.py
+# from main import views해서 views.cafelist (views.py의 cafelist 메서드) 등으로 할 수도 있다.
 from django.conf.urls.static import static
 from django.conf import settings
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
